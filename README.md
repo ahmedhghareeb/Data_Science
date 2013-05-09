@@ -1,1 +1,1 @@
-Text file
+This is my repo for GA's Data Science course
