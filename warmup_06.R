@@ -44,4 +44,4 @@ points(sample1$Year, predict(fit3), type="l", col="blue", lwd=2)
 points(sample1$Year, predict(fit4), type="l", col="green", lwd=2)
 
 # what is going on with fit4? Can you explain why it looks so different from fit2 and fit3?
-# fit4 is taking fit3 and forcing the coeffecient of the Year^2 term to be 0.
+# fit4 is taking fit3 and forcing the coeffecient of the Year^2 term to be 0. We are trying to force a quadratic model into a cubic function.

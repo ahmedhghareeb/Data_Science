@@ -13,6 +13,7 @@ summary(algae)
 # Displays a histogram
 hist(algae$mxPH, prob = T)
 
+# Plots
 plot(algae$NH4, xlab = '')
 abline(h = mean(algae$NH4, na.rm = T), lty = 1)
 abline(h = mean(algae$NH4, na.rm = T) + sd(algae$NH4, na.rm = T), lty = 2)
