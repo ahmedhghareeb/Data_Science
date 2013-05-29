@@ -1,4 +1,6 @@
-# Long trend dynamics in social media
+# NOT DONE YET!!
+
+## Long trend dynamics in social media
 
 **Objective/Abstract: What is the paper about, and what was the goal of the paper?**
 
