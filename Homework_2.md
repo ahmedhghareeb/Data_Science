@@ -1,5 +1,3 @@
-# NOT DONE YET!!
-
 ## Long trend dynamics in social media
 
 **Objective/Abstract: What is the paper about, and what was the goal of the paper?**
@@ -14,12 +12,10 @@ The hypothesis is that by looking at patterns of user's continued interaction wi
 
 In its model, the paper made a distinction between first time posts (FTP) and repeated posts (RP) to separate out how quickly the audience who was posting about the topic was growing vs how deeply the topic resonated with people who had already posted about the topic.
 
-The paper looked at Twitter data to determine topics and trends. It used the cumulative count of tweets and retweets for a topic as a proxy for the popularity of the topic.
+The paper looked at Twitter data (dataset of 16.32 million posts on 3361 topics) to determine topics and trends. It used the cumulative count of tweets and retweets for a topic as a proxy for the popularity of the topic.
 
 It looked at the data for topics that were "trending" as determined by Twitter's algorithms.
 
-Obtained a dataset of 16.32 million posts on 3361 topics.
-
 **Conclusions: Overall assessment of the paper. This is generally broken into parts of what you thought about the material you read, do you think it was well written or poorly written, how well did it answer the questions it was looking at, and did you have any follow up questions about the data, methodologies, etc.**
 
-Looked pretty convincing.
+I didn't follow all of the math in the paper, but the idea of separating out the FTP and RP make sense to me in terms of measuring virality and resonance respectively.

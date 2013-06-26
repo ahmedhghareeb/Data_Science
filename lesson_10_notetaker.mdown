@@ -1,0 +1,68 @@
+## Lesson 10: Ensemble Methods
+
+Review Decision Trees
+---------------------
+
+Name 3 facts about decision trees:
+
+
+Intro to Ensemble methods
+-------------------------
+
+What are ensemble methods, and why should we use them?
+
+
+What kind of machine learning problems can they solve?
+
+
+
+What are some kinds of ensemble methods?
+
+
+Bagging
+-------
+
+What is bagging?
+
+
+Steps in a bagging method:
+
+
+
+Advantages:
+
+
+Disadvantages:
+
+
+
+
+Random Forests
+---------------
+
+What are random forests?
+
+
+What makes random forests different from bagging?
+
+
+
+Advantages over bagging:
+
+
+web link: https://bigml.com/user/BigML/gallery/model/4f8991e1035d0737d700002d
+
+
+Boosting
+-------
+
+What is boosting?
+
+
+
+What are the primary differences between boosting and bagging?
+
+
+
+What are some disadvantages to boosting?
+

@@ -1,0 +1,58 @@
+## Lesson 11: Support Vector Machines
+
+Review Logistic Regression
+--------------------------
+
+Name 3 facts about logistic regression:
+
+
+Intro to Support Vector Machines
+--------------------------------
+
+Shorthand for support vector machine:
+
+What is a support vector machine?
+
+
+
+Primary difference between SVMs and other classification algorithms?
+
+
+Optimizing Large Margin
+-----------------------
+
+Goal for optimization:
+
+What is a hyperplane?
+
+
+What are support vectors? Are they more important or less important than the rest of the data?
+
+
+
+Slack Variables
+---------------
+
+How do we use SVMs with "imperfect" data?
+
+
+
+What is a slack variable?
+
+
+What's the difference between a hard margin and soft margin?
+
+
+
+Kernels
+-------
+
+What are kernels? What is a kernel trick?
+
+
+How can they be used to define nonlinear classification?
+
+
+What are some popular kernels?
+
+Web Link: http://www.youtube.com/watch?v=BesKtH4Qln8
