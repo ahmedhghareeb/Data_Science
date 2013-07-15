@@ -1,0 +1,19 @@
+Strategies
+
+considered different classifiers, but stuck with naive bayes since keeps the feature set and can look at most informative features. SVM actually did worse.
+
+Unigrams alone
+Bigrams alone
+Trigrams alone
+Capitalization percentage alone
+Tweet Length
+Removing stopwords (didn't help. Actually decreased accuracy. Words like "are", "an", "you", "your" are actually pretty helpful)
+
+Unigrams + Bigrams --> Worse
+not sure why, but it could potentially help with confidence if I had gotten AUC going...
+
+Unigrams + best bigrams?
+
+Next... Character ngrams
+better filtering of words
+Look at AUC
