@@ -59,6 +59,7 @@ def process_tweet(tweet):
 
     # Fix spellings
     tweet = re.sub("azz", "ass", tweet)
+    tweet = re.sub("realy", "really", tweet)
     tweet = re.sub(" u ", " you ", tweet)
     tweet = re.sub(" em ", " them ", tweet)
     tweet = re.sub(" da ", " the ", tweet)
@@ -127,7 +128,7 @@ def get_features_from_tweet(tweet):
 #    bigram_features = dict((w, True) for w in tweet_bigrams)
 
 #########################
-# Only bigrams that appear in the bigram_list are added as features
+# Only bigrams that appear in the bigram_list of top bigrams are added as features
 #########################
 #    tweet_bigrams = bigrams(tokens)
 #    bigram_features = dict()
@@ -144,9 +145,10 @@ def get_features_from_tweet(tweet):
 
 #########################
 # If greater than 60% of the characters in the tweet are upper case, "CAPITALIZED" is added as a feature
+# I tinkered around with a few numbers and 60% was a good cutoff point
 #########################
 #    cap_feature = dict()
-#    cap_percent = float(sum(1 for c in tweet if c.isupper())) / len(tweet)
+#    cap_percent = sum(1 for c in tweet if c.isupper()) / float(len(tweet))
 #    if cap_percent > 0.6:
 #        cap_feature = {'CAPITALIZED': True}
 
@@ -171,11 +173,11 @@ def get_train_features_from_tweets(tweets, insult_clean):
 #########################
 # Load in a few word lists
 # The English stopword list, which turned out not to be effective
-# The list of the 100 most useful unigrams
-# The list of the 15 most useful bigrams
+# The list of the 178 most useful unigrams when using the unigram classifier alone
+# The list of the 15 most useful bigrams when using the bigram classifier alone
 #########################
 stop_words = get_word_list('stopwords.txt')
-unigram_list = get_word_list('top.txt')
+unigram_list = get_word_list('useful_unigrams.txt')
 bigram_list = [('are', 'an'), ('a', 'moron'), ('fuck', 'off'), ('really', 'are'), ('a', 'fool'), ('human', 'being'), ('crawl', 'back'), ('a', 'dumb'), ('fat', 'ass'), ('are', 'a'), ('an', 'idiot'), ('go', 'away'), ('a', 'troll'), ('fuck', 'up'), ('back', 'under')]
 
 #########################
@@ -184,8 +186,8 @@ bigram_list = [('are', 'an'), ('a', 'moron'), ('fuck', 'off'), ('really', 'are')
 #########################
 insult_tweets = []
 clean_tweets = []
-train_tweets = csv.reader(open('train.csv', 'rb'), delimiter=',')
-for row in train_tweets:
+tweet_data = csv.reader(open('data.csv', 'rb'), delimiter=',')
+for row in tweet_data:
     insult = row[0]
     # the datetime information of the tweet was included, but I ignored it
     tweet = row[2]
@@ -197,7 +199,7 @@ for row in train_tweets:
 #########################
 # Split the data into training and test data
 #########################
-negcutoff, poscutoff = len(clean_tweets) * 3 / 4, len(insult_tweets) * 3 / 4
+negcutoff, poscutoff = len(clean_tweets) * 4 / 5, len(insult_tweets) * 4 / 5
 clean_train, clean_test = insult_tweets[:poscutoff], insult_tweets[poscutoff:]
 insult_train, insult_test = clean_tweets[:negcutoff], clean_tweets[negcutoff:]
 
@@ -243,4 +245,4 @@ for tweet in clean_test:
 print "Accuracy: {}".format(correct / float(correct + wrong))
 
 # Show the 10 most informative features (I looked at a lot more when I was tinkering)
-classifier.show_most_informative_features(10)
+classifier.show_most_informative_features(20)
